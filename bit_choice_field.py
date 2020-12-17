@@ -75,8 +75,6 @@ class BitChoiceField(models.IntegerField):
                 ret.append(flag)
             power += 1
             flag = pow(base, power)
-        if not ret:
-            ret = [0]
         return ret
 
     def get_prep_value(self, value):
